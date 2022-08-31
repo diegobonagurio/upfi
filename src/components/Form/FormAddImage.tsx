@@ -122,6 +122,7 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
       <Stack spacing={4}>
         <FileInput
           {...register('image', formValidations.image)}
+          //@ts-ignore
           error={errors.image}
           setImageUrl={setImageUrl}
           localImageUrl={localImageUrl}
@@ -132,12 +133,14 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
 
         <TextInput
           {...register('title', formValidations.title)}
+          //@ts-ignore
           error={errors.title}
           placeholder="Título da imagem..."
         />
 
         <TextInput
           {...register('description', formValidations.description)}
+          //@ts-ignore
           error={errors.description}
           placeholder="Descrição da imagem..."
         />
