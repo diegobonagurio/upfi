@@ -1,4 +1,6 @@
 import { AppProps } from 'next/app';
+import '../styles/scroll.css';
+
 import { ChakraProvider } from '@chakra-ui/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
@@ -10,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ChakraProvider resetCSS theme={theme}>
       <QueryClientProvider client={queryClient}>
+        {/* @ts-ignore */}
         <Component {...pageProps} />
       </QueryClientProvider>
     </ChakraProvider>
